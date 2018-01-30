@@ -68,12 +68,19 @@
         console.log(n1.quantidade); //undefined 
     	console.log(n1);//undefined
 
-    	var n2 = new Negociacao(new Date(), 5, 700);//set é acessado apenas pelo construtor
+    	/*var n2 = new Negociacao(new Date(), 5, 700);//set é acessado apenas pelo construtor
+        
         n2.quantidade =34;
+
         console.log(n2.data.setDate(31));//data atual...
         console.log(n2.quantidade);//exibe 5 
         console.log(n2.valor);//exibe 700 
 		console.log(n2);//objeto com seus atributos preenchido.    	
+        console.log(n2.data);*/
+
+        var n2 = new Negociacao(hoje, 5, 700);
+        console.log(n2.data);
+        hoje.setDate(31);
         console.log(n2.data);
 
     </script>
