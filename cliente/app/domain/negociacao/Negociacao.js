@@ -1,7 +1,8 @@
 class Negociacao {
 
 	constructor(_data, _quantidade, _valor){//o construtor atribui o set no formato "this._nomeVariavel"
-		Object.assign(this, { _data: new Date(_data.getTime()), _quantidade, _valor});
+		Object.assign(this, { _quantidade, _valor});
+		this._data = new Date(_data.getTime());
 		Object.freeze(this);//Esta instancia será imutável
 	}
 
