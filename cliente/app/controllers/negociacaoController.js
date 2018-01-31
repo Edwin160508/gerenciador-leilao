@@ -1,17 +1,20 @@
 class NegociacaoController {
 	
+	constructor(){
+		//criando um alias para lembrar um pouco do jquery
+		let $ = document.querySelector.bind(document);
+		
+		this._inputData = $('#data');
+		this._inputQuantidade = $('#quantidade');
+		this._inputValor = $('#valor');	
+	}
+
 	adiciona(event){
 		// cancelando a submissão do formulário
 		event.preventDefault();
 
-		//criando um alias para lembrar um pouco do jquery
-		let $ = document.querySelector.bind(document);
-		let inputData = $('#data');
-		let inputQuantidade = $('#quantidade');
-		let inputValor = $('#valor');
-
-		console.log(inputData.value);
-		console.log(parseInt(inputQuantidade.value));
-		console.log(parseFloat(inputValor.value));
+		console.log(this._inputData.value);
+		console.log(parseInt(this._inputQuantidade.value));
+		console.log(parseFloat(this._inputValor.value));
 	}
 }

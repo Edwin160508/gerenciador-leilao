@@ -3,4 +3,4 @@ let negociacaoController = new NegociacaoController();
 
 document
 	.querySelector('.form')
-	.addEventListener('submit', negociacaoController.adiciona);
+	.addEventListener('submit', negociacaoController.adiciona.bind(negociacaoController));
