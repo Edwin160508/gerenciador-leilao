@@ -61,27 +61,11 @@
     <script src="app/domain/negociacao/Negociacao.js"></script>
     <script>
 
-    	var n1 = new Negociacao();
-    	n1._data = new Date();//set Não é mais possível utilizar set desta forma por causa do "Object.freeze();"
-    	n1._quantidade = 10;//set -- 
-    	n1._valor = 250.65;//set --
-        console.log(n1.quantidade); //undefined 
-    	console.log(n1);//undefined
-
-    	/*var n2 = new Negociacao(new Date(), 5, 700);//set é acessado apenas pelo construtor
-        
-        n2.quantidade =34;
-
-        console.log(n2.data.setDate(31));//data atual...
-        console.log(n2.quantidade);//exibe 5 
-        console.log(n2.valor);//exibe 700 
-		console.log(n2);//objeto com seus atributos preenchido.    	
-        console.log(n2.data);*/
-
-        var n2 = new Negociacao(hoje, 5, 700);
-        console.log(n2.data);
-        hoje.setDate(31);
-        console.log(n2.data);
+    	let hoje = new Date();
+        let n1 = new Negociacao(hoje, 5, 700);
+        console.log(n1.data);
+        hoje.setDate(11);
+        console.log(n1.data);
 
     </script>
 </body>
