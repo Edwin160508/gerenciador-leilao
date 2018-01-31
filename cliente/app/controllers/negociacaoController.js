@@ -3,9 +3,12 @@ class NegociacaoController {
 	adiciona(event){
 		// cancelando a submissão do formulário
 		event.preventDefault();
-		let inputData = document.querySelector('#data');
-		let inputQuantidade = document.querySelector('#quantidade');
-		let inputValor = document.querySelector('#valor');
+
+		//criando um alias para lembrar um pouco do jquery
+		let $ = document.querySelector.bind(document);
+		let inputData = $('#data');
+		let inputQuantidade = $('#quantidade');
+		let inputValor = $('#valor');
 
 		console.log(inputData.value);
 		console.log(parseInt(inputQuantidade.value));
