@@ -12,11 +12,9 @@ class NegociacaoController {
 	adiciona(event){
 		// cancelando a submissão do formulário
 		event.preventDefault();
-		//console.log(this._inputData.value);
-		let data2 = new DateHelper();
-		//console.log("DateHelper "+data2.modelaDataBrowserAmericano(this._inputData.value));
+	
 		let negociacao = new Negociacao(
-			data2.modelaDataBrowserAmericano(this._inputData.value), 
+			DateHelper.modelaDataBrowserAmericano(this._inputData.value), 
 			parseInt(this._inputQuantidade.value), 
 			parseFloat(this._inputValor.value)
 		);

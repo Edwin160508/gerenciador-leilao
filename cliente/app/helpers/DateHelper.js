@@ -1,12 +1,12 @@
 /*Classe responsável para tratamento de conversão de datas*/
 
 class DateHelper {
-	
-	constructor(){
 		
+	constructor(){
+		throw new Error('Esta classe não pode ser instanciada');
 	}
 	
-	modelaDataBrowserAmericano(dataStringFormat){
+	static modelaDataBrowserAmericano(dataStringFormat){
 		let idioma = navigator.language || navigator.userLanguage; 		
 		var date;
 		if(idioma === 'en-US'){
