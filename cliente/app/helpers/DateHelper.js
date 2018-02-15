@@ -8,7 +8,7 @@ class DateHelper {
 	
 	static modelaDataBrowserAmericano(dataStringFormat){
 		let idioma = navigator.language || navigator.userLanguage; 		
-		var date;
+		let date = new Date();
 		if(idioma === 'en-US'){
 			date = new Date(...dataStringFormat.split('-').move(1,2).map((item, indice) => item - indice % 2));
 		}else{
